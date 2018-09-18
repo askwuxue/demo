@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn1">
+    <input type="button" value="干掉第一个元素" id="btn2">
+    <script>
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+
+        function f1 () {
+            console.log('第一个');
+        }
+
+        function f2 () {
+            console.log('第二个');
+        }
+
+        function addEventListener (element, type, fn) {
+            if(element.addEventListener) {
+                element.addEventListener(type, fn, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + type, fn)
+            } else {
+                element['on' + type] = fn;
+            }
+        }
+
+        function removeEventListener (element, type, fnName) {
+            if (element.removeEventListener) {
+                element.removeEventListener(type, fnName, false)
+            } else if (element.detachEvent) {
+                element.detachEvent('on' + type, fnName);
+            } else {
+                element['on' + type] = null;
+            }
+        }
+
+        addEventListener(btn1, 'click', f1);
+        addEventListener(btn1, 'click', f2);
+        btn2.onclick = function () {
+            removeEventListener(btn1, 'click', f2);
+        }
+    </script>
+</body>
+</html>

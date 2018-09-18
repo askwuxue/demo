@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            display: flex;
+            /* 从上到下排列 */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* 居中对齐 */
+            /* justify-content: center; */
+            justify-content: space-around;
+            /* align-items: flex-end; */
+            align-items: center;
+        }
+        #dv1, #dv2, #dv3 {
+            width: 100px;
+        }
+        #dv1 {
+            background-color: purple;
+            height: 100px;
+        }
+        #dv2 {
+            background-color:pink;
+            height: 150px;
+        }
+        #dv3 {
+            background-color: green;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="dv1">1</div>
+        <div id="dv2">2</div>
+        <div id="dv3">3</div>
+    </div>
+</body>
+</html>
