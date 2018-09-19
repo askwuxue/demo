@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="点击">
+
+    <script>
+        let arr = [];
+        // var 和 let的区别 闭包的存在
+        for (let i = 0; i < 10; i++) {
+            arr[i] = function () {
+                console.log(i);
+            }
+        }
+        arr[8]();
+    </script>
+
+</body>
+</html>
