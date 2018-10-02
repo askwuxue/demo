@@ -2,7 +2,8 @@ const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((request, response) => {
-    console.log('request: ' + request.url);
+    // console.log('request: ' + request.url);
+    console.log(request.headers.host);
     const html = fs.readFileSync('test.html', 'utf8');
     const js = fs.readFileSync('load.js', 'utf8');
 
