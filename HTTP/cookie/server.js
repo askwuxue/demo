@@ -10,7 +10,7 @@ const server = http.createServer((request, response) => {
     if (request.url === '/') {
         response.writeHead(200, {
             'Content-Type': 'text/html ',
-            'set-cookie': ['name=wuxue;','pass=1314; max-age=20; httpOnly'],
+            'set-cookie': ['name=wuxue; httpOnly;','pass=1314; max-age=20; secure; httpOnly'],
             'Connection': 'close'
         })
         response.end(html);
