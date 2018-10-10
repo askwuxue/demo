@@ -6,24 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        p {
-            width: 200px;
-            height: 100px;
-            background-color: purple;
-            line-height: 100px;
-            text-align: center;
-            margin: 100px;
+        #grid {
+            display: flex;
         }
-        .wrap {
-            overflow: hidden;
+        #grid span {
+            height: 100px;
+            margin: 0 20px;
+            background-color: purple;
+            /* flex: 1; */
+        }
+        #grid span:nth-child(1) {
+            flex: 1;
+        }
+        #grid span:nth-child(2) {
+            flex: 2;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-            <p>first</p>
+    <div id="grid">
+        <span>1</span>
+        <span>2</span>
     </div>
-    
-    <p>Second</p>
 </body>
 </html>
