@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            /* border 的宽度会撑开 当两个或者多个border在一起的时候，他们之间不会重叠 */
+            /* 利用这个特性， 让他们互相挤开对方，形成不同的样式 再利用border-color的属性 */
+            /* transparent 属性 将不需要的border进行隐藏 */
+            width: 0px;
+            height: 0px;
+            border-left: 100px solid transparent;
+            /* border-right: 50px solid purple; */
+            border-bottom: 100px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
