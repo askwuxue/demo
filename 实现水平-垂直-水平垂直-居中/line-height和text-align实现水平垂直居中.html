@@ -11,13 +11,13 @@
             height: 400px;
             border: 1px solid red;
             
-            /* text-align 可以被继承 */
+            /* text-align 可以被继承 只对inline-block 和 inline 元素生效 */
             text-align: center;
-            /* line-height 可以对文字和内联样式生效 */
+            /* line-height 对文字生效 */
             line-height: 400px;
         }
         .box2 {
-            /* inline-block 可以实现text-align */
+            /* display: block; */
             /* display: inline-block; */
             height: 200px;
             width: 200px;
@@ -27,7 +27,6 @@
 </head>
 <body>
     <div class="box1">
-        <!-- 块级元素，text-align和 line-height不生效 -->
         <!-- <div class="box2">子元素</div> -->
         <span class="box2">子元素</span>
 

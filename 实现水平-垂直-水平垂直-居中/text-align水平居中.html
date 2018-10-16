@@ -13,17 +13,17 @@
             text-align: center;
         }
         .box2 {
+            display: inline-block;
             width: 200px;
             height: 200px;
             border: 1px solid #ccc;
-            /* display: block; */
         }
     </style>
 </head>
 <body>
     <div class="box">
         <!-- <div class="box2">子元素</div> -->
-        <!-- 这种方式只对子元素是内联元素起作用，对块级元素不起作用
+        <!-- 这种方式只对子元素是inline 和 inline-block 起作用，对块级元素不起作用
             但是块级元素可以继承text-align属性
         -->
         <span class="box2">子元素</span>        
