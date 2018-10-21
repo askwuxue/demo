@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            height: 300px;
+            width: 600px;
+        }
+        .middle,
+        .left,
+        .right {
+            float: left;
+            height: 100px;
+        }
+        .middle {
+            background-color: green;
+            width: 100%;
+        }
+        .left {
+            width: 200px;
+            /* 相对于最近的父级块级元素的width  */
+            margin-left: -100%;
+            background-color: pink;
+        }
+        .right {
+            width: 150px;
+            background-color: purple;
+            margin-left: -150px;
+        }
+        .inner_middle {
+            height: 100%;
+            /* 利用margin值将两边的元素挤开一定的位置 */
+            margin-left: 200px;
+            margin-right: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle">
+            <div class="inner_middle">中间</div>
+        </div>
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+    </div>
+</body>
+</html>

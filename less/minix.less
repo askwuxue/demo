@@ -1,0 +1,23 @@
+@bgColor1: pink;
+@bgColor2: red;
+@contentFontSize: 16px;
+
+.block(@bgColor1) {
+    width: 200px;
+    height: 200px;
+    background-color: @bgColor1;
+}
+
+
+.wrap {
+    .nav {
+        background-color: lighten(@bgColor1, 40%);
+    }
+    .content {
+        .block(@bgColor2);
+        font-size: @contentFontSize + 2px;
+        &:hover {
+            background-color: @bgColor2;
+        }
+    }
+}

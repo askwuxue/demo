@@ -1,0 +1,9 @@
+.wrap .nav {
+  background-color: #fff;
+}
+.wrap .content {
+  font-size: 12px;
+}
+.wrap .content:hover {
+  background-color: red;
+}

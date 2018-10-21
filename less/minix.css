@@ -1,0 +1,12 @@
+.wrap .nav {
+  background-color: #ffffff;
+}
+.wrap .content {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  font-size: 18px;
+}
+.wrap .content:hover {
+  background-color: red;
+}

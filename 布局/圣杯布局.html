@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            width: 600px;
+            height: 300px;
+            padding-left: 200px;
+            padding-right: 150px;
+        }
+        .left,
+        .middle,
+        .right {
+            /* 核心思想，进行布局的元素进行浮动 */
+            float: left;
+            height: 100px;
+            position: relative;
+        }
+        /* 自适应的元素占据container的content大小 */
+        .middle {
+            background-color: purple;
+            width: 100%;
+        }
+        .left {
+            background-color: pink;
+            width: 200px;
+            /* margin-left 取值为百分比的时候，相对于最近的块级容器的宽度 width(content)*/
+            margin-left: -100%;
+            right: 200px;
+        }
+        .right {
+            background-color: black;
+            width: 150px;
+            /*  */
+            margin-left: -150px;
+            right: -150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="middle">中间</div>
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+    </div>
+</body>
+</html>

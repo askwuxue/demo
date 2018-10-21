@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        let canvas = document.querySelector('canvas');
+
+        let ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        //起始坐标点
+        ctx.moveTo(50, 50);
+        ctx.lineTo(100, 0);
+        ctx.lineTo(100, 100);
+        ctx.fill();
+
+        // 绘制描边三角形
+        ctx.moveTo(300, 75);
+        ctx.lineTo(250, 25);
+        ctx.lineTo(250, 125);
+        ctx.closePath();
+        ctx.stroke();
+    </script>
+</body>
+</html>

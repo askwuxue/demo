@@ -1,0 +1,17 @@
+.block,
+.wrap .nav,
+.wrap .content:hover {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+.wrap .nav {
+  font-size: 20px;
+  line-height: 20px;
+}
+.wrap .content {
+  font-size: 18px;
+}
+.wrap .content:hover {
+  background-color: red;
+}

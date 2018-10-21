@@ -1,0 +1,28 @@
+@bgColor1: pink;
+@bgColor2: red;
+@contentFontSize: 16px;
+
+// 公共的代码
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: @bgColor1;
+}
+
+
+.wrap {
+    .nav {
+        font-size: 20px;
+        line-height: 20px;
+        &:extend(.block);
+    }
+    
+    .content {
+        font-size: @contentFontSize + 2px;
+        &:hover {
+            &:extend(.block);
+            background-color: @bgColor2;
+        }
+        
+    }
+}

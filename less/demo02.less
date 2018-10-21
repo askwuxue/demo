@@ -1,0 +1,15 @@
+@bgColor1: pink;
+@bgColor2: red;
+@contentFontSize: 16px;
+
+.wrap {
+    .nav {
+        background-color: lighten(@bgColor1, 40%);
+    }
+    .content {
+        font-size: @contentFontSize + 2px;
+        &:hover {
+            background-color: @bgColor2;
+        }
+    }
+}
