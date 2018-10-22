@@ -6,15 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        div {
-            /* 这个高度是跟着窗口的变化变化的 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #div1 {
+            width: 500px;
+            height: 500px;
+        }
+        #div2 {
+            /* 这个高度是根据最近的父级元素的width变化的 */
             border: 1px solid purple;
             width: 100px;
-            padding-top: 20%;
+            padding-top: 50%;
         }
     </style>
 </head>
 <body>
-    <div></div>
+    <div id="div1">
+        <div id="div2"></div>
+    </div>
+    <script>
+        let div = document.querySelector('div');
+        console.log(document.body.clientHeight);
+    </script>
 </body>
 </html>
